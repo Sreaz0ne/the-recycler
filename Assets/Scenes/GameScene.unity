@@ -8963,8 +8963,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -188.51, y: -28.4}
-  m_SizeDelta: {x: 295.02673, y: 32}
+  m_AnchoredPosition: {x: -231.79, y: -28.4}
+  m_SizeDelta: {x: 381.5816, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1510241599
 MonoBehaviour:
@@ -15587,8 +15587,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 188.51, y: -28.4}
-  m_SizeDelta: {x: 295.0267, y: 32}
+  m_AnchoredPosition: {x: 231.78743, y: -28.399994}
+  m_SizeDelta: {x: 381.5816, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2145109034
 MonoBehaviour:
@@ -15689,12 +15689,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2320279420496796684, guid: 4b67cd766d58f994a870fb65a37b93fd, type: 3}
       propertyPath: fireDelay
-      value: 0.18
+      value: 0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2320279420496796685, guid: 4b67cd766d58f994a870fb65a37b93fd, type: 3}
+      propertyPath: speed
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2320279420496796686, guid: 4b67cd766d58f994a870fb65a37b93fd, type: 3}
       propertyPath: energyBar
       value: 
       objectReference: {fileID: 1252909422}
+    - target: {fileID: 2320279420496796686, guid: 4b67cd766d58f994a870fb65a37b93fd, type: 3}
+      propertyPath: playerSpeedVacuuming
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2320279420496796687, guid: 4b67cd766d58f994a870fb65a37b93fd, type: 3}
       propertyPath: gm
       value: 
@@ -15705,7 +15713,7 @@ PrefabInstance:
       objectReference: {fileID: 2145109035}
     - target: {fileID: 2320279420496796687, guid: 4b67cd766d58f994a870fb65a37b93fd, type: 3}
       propertyPath: maxHealthPoint
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2320279420496796912, guid: 4b67cd766d58f994a870fb65a37b93fd, type: 3}
       propertyPath: m_RootOrder
