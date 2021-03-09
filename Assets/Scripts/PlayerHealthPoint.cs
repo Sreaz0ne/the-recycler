@@ -6,6 +6,7 @@ public class PlayerHealthPoint : MonoBehaviour
 {
     public GameObject gm;
     public HealthBar healthBar;
+    public AudioManager am;
 
     public int maxHealthPoint = 1;
 
@@ -23,6 +24,9 @@ public class PlayerHealthPoint : MonoBehaviour
     }
 
     public void TakeDamage(int damage){
+        
+        am.Play("PlayerTakingDamage");
+
         healthPoint -= damage;
         
         healthBar.SetHealth(healthPoint);
@@ -42,6 +46,8 @@ public class PlayerHealthPoint : MonoBehaviour
     }
 
     private void Die() {
+        // Play death sounds
+        am.Play("PlayerDeath");
         // Hide player
         gameObject.SetActive(false);
         // Game over

@@ -8,6 +8,7 @@ public class PlayerShooting : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePoint; 
     public AmmoBar ammoBar;
+    public AudioManager am;
 
     public float fireDelay = 0.25f;
     public int maxAmmo = 10;
@@ -87,6 +88,8 @@ public class PlayerShooting : MonoBehaviour
         Vector2 startPosition = firePoint.position;
                 
         startPosition.y += bulletPrefab.GetComponent<SpriteRenderer>().bounds.extents.y;
+
+        am.Play("PlayerShooting");
 
         // Shooting
         Instantiate( bulletPrefab, startPosition, firePoint.rotation );

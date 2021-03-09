@@ -29,6 +29,7 @@ public class EnemyHealthPoint : MonoBehaviour
     }
 
     public void TakeDamage(int damage){
+        FindObjectOfType<AudioManager>().Play("EnemyTakingDamage");
         healthPoint -= damage;
 
         if ( healthPoint == 0 ) { 
@@ -38,6 +39,9 @@ public class EnemyHealthPoint : MonoBehaviour
 
     private void Die() {
         
+        // Play death sounds
+        FindObjectOfType<AudioManager>().Play("EnemyDeath");
+
         GameObject player = GameObject.Find( "Player" );
         if ( player != null) {
             PlayerScore ps = player.GetComponent<PlayerScore> ();
