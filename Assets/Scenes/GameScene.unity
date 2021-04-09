@@ -202,12 +202,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8264670093215064627, guid: b3127e8dfba12ad4c81ce2782edaa711, type: 3}
       propertyPath: sounds.Array.size
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8264670093215064627, guid: b3127e8dfba12ad4c81ce2782edaa711, type: 3}
       propertyPath: sounds.Array.data[0].clip
       value: 
-      objectReference: {fileID: 8300000, guid: de9827524eba727489eb1e8823777b4d, type: 3}
+      objectReference: {fileID: 8300000, guid: 3cd77e91265d3bb43b9631d4cc508af4, type: 3}
     - target: {fileID: 8264670093215064627, guid: b3127e8dfba12ad4c81ce2782edaa711, type: 3}
       propertyPath: sounds.Array.data[0].loop
       value: 1
@@ -257,6 +257,30 @@ PrefabInstance:
       value: EnemyTakingDamage
       objectReference: {fileID: 0}
     - target: {fileID: 8264670093215064627, guid: b3127e8dfba12ad4c81ce2782edaa711, type: 3}
+      propertyPath: sounds.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1a47c22831bfc8d4eb62588b935d2f53, type: 3}
+    - target: {fileID: 8264670093215064627, guid: b3127e8dfba12ad4c81ce2782edaa711, type: 3}
+      propertyPath: sounds.Array.data[6].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8264670093215064627, guid: b3127e8dfba12ad4c81ce2782edaa711, type: 3}
+      propertyPath: sounds.Array.data[6].name
+      value: Vacuuming
+      objectReference: {fileID: 0}
+    - target: {fileID: 8264670093215064627, guid: b3127e8dfba12ad4c81ce2782edaa711, type: 3}
+      propertyPath: sounds.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 459f703c3c14cbd4883b5ccbf592f969, type: 3}
+    - target: {fileID: 8264670093215064627, guid: b3127e8dfba12ad4c81ce2782edaa711, type: 3}
+      propertyPath: sounds.Array.data[7].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8264670093215064627, guid: b3127e8dfba12ad4c81ce2782edaa711, type: 3}
+      propertyPath: sounds.Array.data[7].name
+      value: SomethingIsVacuumed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8264670093215064627, guid: b3127e8dfba12ad4c81ce2782edaa711, type: 3}
       propertyPath: sounds.Array.data[0].pitch
       value: 1
       objectReference: {fileID: 0}
@@ -278,6 +302,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8264670093215064627, guid: b3127e8dfba12ad4c81ce2782edaa711, type: 3}
       propertyPath: sounds.Array.data[5].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8264670093215064627, guid: b3127e8dfba12ad4c81ce2782edaa711, type: 3}
+      propertyPath: sounds.Array.data[6].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8264670093215064627, guid: b3127e8dfba12ad4c81ce2782edaa711, type: 3}
+      propertyPath: sounds.Array.data[7].pitch
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8264670093215064627, guid: b3127e8dfba12ad4c81ce2782edaa711, type: 3}
@@ -303,6 +335,14 @@ PrefabInstance:
     - target: {fileID: 8264670093215064627, guid: b3127e8dfba12ad4c81ce2782edaa711, type: 3}
       propertyPath: sounds.Array.data[5].volume
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8264670093215064627, guid: b3127e8dfba12ad4c81ce2782edaa711, type: 3}
+      propertyPath: sounds.Array.data[6].volume
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8264670093215064627, guid: b3127e8dfba12ad4c81ce2782edaa711, type: 3}
+      propertyPath: sounds.Array.data[7].volume
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8264670093215064636, guid: b3127e8dfba12ad4c81ce2782edaa711, type: 3}
       propertyPath: m_RootOrder
@@ -15836,6 +15876,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2320279419474345729, guid: 4b67cd766d58f994a870fb65a37b93fd, type: 3}
+      propertyPath: am
+      value: 
+      objectReference: {fileID: 26200399}
+    - target: {fileID: 2320279419474345729, guid: 4b67cd766d58f994a870fb65a37b93fd, type: 3}
       propertyPath: php
       value: 
       objectReference: {fileID: 2320279420469304465}
@@ -15871,6 +15915,10 @@ PrefabInstance:
       propertyPath: speed
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 2320279420496796686, guid: 4b67cd766d58f994a870fb65a37b93fd, type: 3}
+      propertyPath: am
+      value: 
+      objectReference: {fileID: 26200399}
     - target: {fileID: 2320279420496796686, guid: 4b67cd766d58f994a870fb65a37b93fd, type: 3}
       propertyPath: energyBar
       value: 

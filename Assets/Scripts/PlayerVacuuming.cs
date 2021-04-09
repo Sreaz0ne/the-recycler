@@ -8,6 +8,7 @@ public class PlayerVacuuming : MonoBehaviour
     public GameObject vacuumCleaner;
     public PlayerMovement pm;
     public EnergyBar energyBar;
+    public AudioManager am;
 
     public float maxVacuumCleanerEnergy = 5f;
     public float speedEnergyDischarge = 2f;
@@ -53,6 +54,10 @@ public class PlayerVacuuming : MonoBehaviour
             // Change player speed
             pm.speed = playerSpeedVacuuming;
             
+            if(!am.isPlaying("Vacuuming")) {
+                 am.Play("Vacuuming");
+             }
+
             // Discharging vacuum cleaner
             vacuumCleanerEnergy -= speedEnergyDischarge * Time.deltaTime;
 
@@ -70,6 +75,10 @@ public class PlayerVacuuming : MonoBehaviour
             energyBar.SetEnergy(vacuumCleanerEnergy);
         }
         else {
+            
+            if(am.isPlaying("Vacuuming")) {
+                 am.Stop("Vacuuming");
+             }
 
             // Dicrease timer to recharge
             if( cooldownEnergyRechargeTimer > 0 ) {
