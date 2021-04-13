@@ -15883,6 +15883,10 @@ PrefabInstance:
       propertyPath: php
       value: 
       objectReference: {fileID: 2320279420469304465}
+    - target: {fileID: 2320279419606369392, guid: 4b67cd766d58f994a870fb65a37b93fd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31f12adbe7f1b4c4c96688677886184b, type: 2}
     - target: {fileID: 2320279420496796681, guid: 4b67cd766d58f994a870fb65a37b93fd, type: 3}
       propertyPath: gm
       value: 
@@ -16003,6 +16007,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2320279420496796913, guid: 4b67cd766d58f994a870fb65a37b93fd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31f12adbe7f1b4c4c96688677886184b, type: 2}
     - target: {fileID: 2320279420496796918, guid: 4b67cd766d58f994a870fb65a37b93fd, type: 3}
       propertyPath: m_Name
       value: Player
@@ -16051,3 +16059,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e24fd83f12f57e14585d14b6f90c56d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2320279420469304466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2320279420469304462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ef839c5b0d3e9f4590d2dccbc55f7c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashColor: {r: 1, g: 1, b: 1, a: 0}
+  flashDuration: 0.3

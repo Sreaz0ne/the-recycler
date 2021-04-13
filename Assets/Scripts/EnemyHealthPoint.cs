@@ -10,7 +10,14 @@ public class EnemyHealthPoint : MonoBehaviour
     public int healthPoint = 1;
     public int scoreGiven = 25;
     public int hpScrapProbability = 20;
- 
+
+    private SpriteFlash sp;
+    
+    // Awake is called when the script instance is being loaded.
+    void Awake() {
+        sp = GetComponent<SpriteFlash>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +36,10 @@ public class EnemyHealthPoint : MonoBehaviour
     }
 
     public void TakeDamage(int damage){
+
+        // Make enemy flash
+        sp.Flash();
+
         FindObjectOfType<AudioManager>().Play("EnemyTakingDamage");
         healthPoint -= damage;
 

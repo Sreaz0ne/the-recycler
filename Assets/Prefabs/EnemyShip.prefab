@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 4789506169032765629}
   - component: {fileID: 4789506169032765628}
   - component: {fileID: 4789506169032765571}
+  - component: {fileID: 3616167972794233641}
   m_Layer: 0
   m_Name: EnemyShip
   m_TagString: Enemy
@@ -86,7 +87,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31f12adbe7f1b4c4c96688677886184b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -222,3 +223,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sr: {fileID: 4789506169032765625}
   speed: 1.9
+--- !u!114 &3616167972794233641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4789506169032765626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ef839c5b0d3e9f4590d2dccbc55f7c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashColor: {r: 1, g: 1, b: 1, a: 0}
+  flashDuration: 0.3

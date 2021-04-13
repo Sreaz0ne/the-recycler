@@ -165,6 +165,7 @@ GameObject:
   - component: {fileID: 7625728458962230324}
   - component: {fileID: 7625728458962230327}
   - component: {fileID: 7625728458962230326}
+  - component: {fileID: 5786067404132141870}
   m_Layer: 0
   m_Name: EnemyGunship
   m_TagString: Enemy
@@ -211,7 +212,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31f12adbe7f1b4c4c96688677886184b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -343,6 +344,20 @@ MonoBehaviour:
   - {fileID: 7625728458210353336}
   - {fileID: 7625728459038511896}
   fireDelay: 2.3
+--- !u!114 &5786067404132141870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7625728458962230322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ef839c5b0d3e9f4590d2dccbc55f7c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashColor: {r: 1, g: 1, b: 1, a: 0}
+  flashDuration: 0.3
 --- !u!1 &7625728459038511899
 GameObject:
   m_ObjectHideFlags: 0

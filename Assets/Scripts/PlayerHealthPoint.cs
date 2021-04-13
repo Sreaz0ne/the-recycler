@@ -11,10 +11,12 @@ public class PlayerHealthPoint : MonoBehaviour
     public int maxHealthPoint = 1;
 
     private int healthPoint;
+    private SpriteFlash sp;
 
     // Awake is called when the script instance is being loaded.
     void Awake() {
         healthPoint = maxHealthPoint;
+        sp = GetComponent<SpriteFlash>();
     }
 
     // Start is called before the first frame update
@@ -24,7 +26,10 @@ public class PlayerHealthPoint : MonoBehaviour
     }
 
     public void TakeDamage(int damage){
-        
+
+        // Make player flash
+        sp.Flash();
+
         am.Play("PlayerTakingDamage");
 
         healthPoint -= damage;
