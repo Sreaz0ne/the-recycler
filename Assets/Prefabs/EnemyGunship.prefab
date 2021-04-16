@@ -335,15 +335,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af4ca9255ddb42c499f06e8dad6690ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 7891857495101506647, guid: cb73f87052ad64d4a8b5071f0fa279d5, type: 3}
   sr: {fileID: 7625728458962230323}
   guns:
-  - {fileID: 7625728457435545984}
-  - {fileID: 7625728457790267218}
-  - {fileID: 7625728458481798519}
-  - {fileID: 7625728457175796468}
-  - {fileID: 7625728458210353336}
-  - {fileID: 7625728459038511896}
+  - gun: {fileID: 7625728457435545984}
+    bullet: {fileID: 7891857495101506647, guid: cb73f87052ad64d4a8b5071f0fa279d5, type: 3}
+  - gun: {fileID: 7625728457790267218}
+    bullet: {fileID: 7891857495101506647, guid: cb73f87052ad64d4a8b5071f0fa279d5, type: 3}
+  - gun: {fileID: 7625728458481798519}
+    bullet: {fileID: 7891857495101506647, guid: 050c5d87c68fc12488ddcf107a0129ac, type: 3}
+  - gun: {fileID: 7625728457175796468}
+    bullet: {fileID: 7891857495101506647, guid: 050c5d87c68fc12488ddcf107a0129ac, type: 3}
+  - gun: {fileID: 7625728458210353336}
+    bullet: {fileID: 7891857495101506647, guid: 050c5d87c68fc12488ddcf107a0129ac, type: 3}
+  - gun: {fileID: 7625728459038511896}
+    bullet: {fileID: 7891857495101506647, guid: 050c5d87c68fc12488ddcf107a0129ac, type: 3}
   fireDelay: 2.3
 --- !u!114 &5786067404132141870
 MonoBehaviour:

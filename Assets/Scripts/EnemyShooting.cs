@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class EnemyShooting : MonoBehaviour
 {
-    public GameObject bulletPrefab;
     public SpriteRenderer sr;
-    public List<Transform> guns ;
+    public Gun[] guns ;
 
     public float fireDelay = 1.25f;
 
@@ -33,14 +32,14 @@ public class EnemyShooting : MonoBehaviour
     private void Shoot() {
         cooldownTimer = fireDelay;
 
-        foreach (Transform gun in guns)
-        {
-            Vector2 startPosition = gun.transform.position;
+        foreach (Gun gun in guns)
+        {   
+            Vector2 startPosition = gun.gun.transform.position;
             
-            startPosition.y += bulletPrefab.GetComponent<SpriteRenderer>().bounds.extents.y * Mathf.Cos(gun.transform.rotation.eulerAngles.z * Mathf.Deg2Rad);
-            startPosition.x += bulletPrefab.GetComponent<SpriteRenderer>().bounds.extents.y * -Mathf.Sin(gun.transform.rotation.eulerAngles.z * Mathf.Deg2Rad);
+            startPosition.y += gun.bullet.GetComponent<SpriteRenderer>().bounds.extents.y * Mathf.Cos(gun.gun.transform.rotation.eulerAngles.z * Mathf.Deg2Rad);
+            startPosition.x += gun.bullet.GetComponent<SpriteRenderer>().bounds.extents.y * -Mathf.Sin(gun.gun.transform.rotation.eulerAngles.z * Mathf.Deg2Rad);
             
-            Instantiate( bulletPrefab, startPosition, gun.transform.rotation );
+            Instantiate( gun.bullet, startPosition, gun.gun.transform.rotation );
         }
     }
 }
