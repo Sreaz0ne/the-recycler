@@ -76,5 +76,6 @@ public class PlayerHealthPoint : MonoBehaviour
     public void UpgradeMaxHealthPoint(int healthPointToAdd) {
         maxHealthPoint += healthPointToAdd;
         healthBar.SetMaxHealth(maxHealthPoint);
+        Healing(1);
     } 
 }

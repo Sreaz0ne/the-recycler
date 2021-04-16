@@ -9479,7 +9479,7 @@ MonoBehaviour:
   - title: SPEED CHARGING VCE UPGRADE
     subtitle: '+ 0.10 speed '
     upgradeImage: {fileID: 21300000, guid: 841ef28f72d23a74d8eaae5789665d0c, type: 3}
-    upgradeProbability: 30
+    upgradeProbability: 40
     upgradeFunction:
       m_PersistentCalls:
         m_Calls:
@@ -9498,7 +9498,7 @@ MonoBehaviour:
   - title: HP UPGRADE
     subtitle: + 1 HP
     upgradeImage: {fileID: 21300000, guid: b8094a9e0a1b0284fbe2645444bba2e7, type: 3}
-    upgradeProbability: 20
+    upgradeProbability: 30
     upgradeFunction:
       m_PersistentCalls:
         m_Calls:
