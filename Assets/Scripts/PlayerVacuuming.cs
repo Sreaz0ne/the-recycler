@@ -55,8 +55,8 @@ public class PlayerVacuuming : MonoBehaviour
             pm.speed = playerSpeedVacuuming;
             
             if(!am.isPlaying("Vacuuming")) {
-                 am.Play("Vacuuming");
-             }
+                am.Play("Vacuuming");
+            }
 
             // Discharging vacuum cleaner
             vacuumCleanerEnergy -= speedEnergyDischarge * Time.deltaTime;
@@ -77,8 +77,8 @@ public class PlayerVacuuming : MonoBehaviour
         else {
             
             if(am.isPlaying("Vacuuming")) {
-                 am.Stop("Vacuuming");
-             }
+               am.Stop("Vacuuming");
+            }
 
             // Dicrease timer to recharge
             if( cooldownEnergyRechargeTimer > 0 ) {

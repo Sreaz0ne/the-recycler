@@ -53,6 +53,10 @@ public class PlayerHealthPoint : MonoBehaviour
 
     private void Die() {
 
+        if(am.isPlaying("Vacuuming")) {
+            am.Stop("Vacuuming");
+        }
+
         // Play death sounds
         am.Play("PlayerDeath");
 
