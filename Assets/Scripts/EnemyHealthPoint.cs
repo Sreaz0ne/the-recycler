@@ -6,6 +6,7 @@ public class EnemyHealthPoint : MonoBehaviour
 {
     public GameObject scrapPrefab;
     public GameObject scrapHPPrefab;
+    public GameObject explosion; 
     
     public int healthPoint = 1;
     public int scoreGiven = 25;
@@ -52,6 +53,9 @@ public class EnemyHealthPoint : MonoBehaviour
         
         // Play death sounds
         FindObjectOfType<AudioManager>().Play("EnemyDeath");
+
+        // Make an explosion
+        Instantiate( explosion, transform.position, Quaternion.identity );
 
         GameObject player = GameObject.Find( "Player" );
         if ( player != null) {

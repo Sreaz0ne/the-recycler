@@ -7,6 +7,7 @@ public class PlayerHealthPoint : MonoBehaviour
     public GameObject gm;
     public HealthBar healthBar;
     public AudioManager am;
+    public GameObject explosion; 
 
     public int maxHealthPoint = 1;
 
@@ -51,8 +52,13 @@ public class PlayerHealthPoint : MonoBehaviour
     }
 
     private void Die() {
+
         // Play death sounds
         am.Play("PlayerDeath");
+
+        // Make an explosion
+        Instantiate( explosion, transform.position, Quaternion.identity );
+
         // Hide player
         gameObject.SetActive(false);
         // Game over

@@ -319,6 +319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrapPrefab: {fileID: 82991455963300563, guid: ea0e2830be9ff5b45980706fdf7f5b9f, type: 3}
   scrapHPPrefab: {fileID: 8004517984913622637, guid: 93fd985da20e1bc4aaaf0f47998aaab4, type: 3}
+  explosion: {fileID: 5614033355831927281, guid: 713c2384c623ddf4d9e493cb7acbfc79, type: 3}
   healthPoint: 3
   scoreGiven: 25
   hpScrapProbability: 40
