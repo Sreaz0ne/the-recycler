@@ -15913,7 +15913,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2320279420496796684, guid: 4b67cd766d58f994a870fb65a37b93fd, type: 3}
       propertyPath: fireDelay
-      value: 0.19
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 2320279420496796685, guid: 4b67cd766d58f994a870fb65a37b93fd, type: 3}
       propertyPath: cs
@@ -15921,7 +15921,7 @@ PrefabInstance:
       objectReference: {fileID: 1719020191}
     - target: {fileID: 2320279420496796685, guid: 4b67cd766d58f994a870fb65a37b93fd, type: 3}
       propertyPath: speed
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2320279420496796685, guid: 4b67cd766d58f994a870fb65a37b93fd, type: 3}
       propertyPath: canvasUI
@@ -15945,7 +15945,7 @@ PrefabInstance:
       objectReference: {fileID: 1252909422}
     - target: {fileID: 2320279420496796686, guid: 4b67cd766d58f994a870fb65a37b93fd, type: 3}
       propertyPath: playerSpeedVacuuming
-      value: 3.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2320279420496796687, guid: 4b67cd766d58f994a870fb65a37b93fd, type: 3}
       propertyPath: am

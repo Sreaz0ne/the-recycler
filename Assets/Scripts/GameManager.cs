@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void SetGameOver() {
-        Invoke( "GameOver", 0.25f );
+        Invoke( "GameOver", 0.75f );
     }
 
     private void GameOver() {
