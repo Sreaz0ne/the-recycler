@@ -676,7 +676,9 @@ MonoBehaviour:
   - enemy: {fileID: 4789506169032765626, guid: a57480938a22c4949a283233716e9335, type: 3}
     spawnProbability: 80
   - enemy: {fileID: 7625728458962230322, guid: d0dda5092250a431fae9f515110f737d, type: 3}
-    spawnProbability: 20
+    spawnProbability: 15
+  - enemy: {fileID: 4789506169032765626, guid: 59519f241c632d746995bf1459c917c8, type: 3}
+    spawnProbability: 40
   spawnTime: 2
   minWave: 1
   maxWave: 4
