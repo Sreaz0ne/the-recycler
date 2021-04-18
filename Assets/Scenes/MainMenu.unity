@@ -1162,7 +1162,7 @@ GameObject:
   - component: {fileID: 882950387}
   - component: {fileID: 882950386}
   m_Layer: 5
-  m_Name: AltKey
+  m_Name: SKey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1207,7 +1207,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e785652414004cd40a4bc5bdfda107b1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dfc91ef01938fb340b943a191c1d2660, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6289,7 +6289,7 @@ GameObject:
   - component: {fileID: 1081346042}
   - component: {fileID: 1081346041}
   m_Layer: 5
-  m_Name: LctrlKey
+  m_Name: AKey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6334,7 +6334,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bb17b0a86b5f5b749ae7f894a73e6b17, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bb180e0e8c95ceb4782c4aea6c3c691a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
