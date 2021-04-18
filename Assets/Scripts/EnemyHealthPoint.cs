@@ -6,11 +6,19 @@ public class EnemyHealthPoint : MonoBehaviour
 {
     public GameObject scrapPrefab;
     public GameObject scrapHPPrefab;
+    public GameObject explosion; 
     
     public int healthPoint = 1;
     public int scoreGiven = 25;
     public int hpScrapProbability = 20;
- 
+
+    private SpriteFlash sp;
+    
+    // Awake is called when the script instance is being loaded.
+    void Awake() {
+        sp = GetComponent<SpriteFlash>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +37,11 @@ public class EnemyHealthPoint : MonoBehaviour
     }
 
     public void TakeDamage(int damage){
+
+        // Make enemy flash
+        sp.Flash();
+
+        FindObjectOfType<AudioManager>().Play("EnemyTakingDamage");
         healthPoint -= damage;
 
         if ( healthPoint == 0 ) { 
@@ -38,6 +51,12 @@ public class EnemyHealthPoint : MonoBehaviour
 
     private void Die() {
         
+        // Play death sounds
+        FindObjectOfType<AudioManager>().Play("EnemyDeath");
+
+        // Make an explosion
+        Instantiate( explosion, transform.position, Quaternion.identity );
+
         GameObject player = GameObject.Find( "Player" );
         if ( player != null) {
             PlayerScore ps = player.GetComponent<PlayerScore> ();

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7625728457175796468}
   m_Layer: 0
-  m_Name: Left gun 2
+  m_Name: Right gun 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7625728458210353336}
   m_Layer: 0
-  m_Name: Right gun 1
+  m_Name: Left gun 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -130,7 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7625728458481798519}
   m_Layer: 0
-  m_Name: Left gun 1
+  m_Name: Right gun 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -165,6 +165,7 @@ GameObject:
   - component: {fileID: 7625728458962230324}
   - component: {fileID: 7625728458962230327}
   - component: {fileID: 7625728458962230326}
+  - component: {fileID: 5786067404132141870}
   m_Layer: 0
   m_Name: EnemyGunship
   m_TagString: Enemy
@@ -211,7 +212,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31f12adbe7f1b4c4c96688677886184b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -318,9 +319,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrapPrefab: {fileID: 82991455963300563, guid: ea0e2830be9ff5b45980706fdf7f5b9f, type: 3}
   scrapHPPrefab: {fileID: 8004517984913622637, guid: 93fd985da20e1bc4aaaf0f47998aaab4, type: 3}
-  healthPoint: 3
-  scoreGiven: 25
-  hpScrapProbability: 40
+  explosion: {fileID: 5614033355831927281, guid: 713c2384c623ddf4d9e493cb7acbfc79, type: 3}
+  healthPoint: 4
+  scoreGiven: 100
+  hpScrapProbability: 30
 --- !u!114 &7625728458962230326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,16 +335,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af4ca9255ddb42c499f06e8dad6690ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 7891857495101506647, guid: cb73f87052ad64d4a8b5071f0fa279d5, type: 3}
   sr: {fileID: 7625728458962230323}
   guns:
-  - {fileID: 7625728457435545984}
-  - {fileID: 7625728457790267218}
-  - {fileID: 7625728458481798519}
-  - {fileID: 7625728457175796468}
-  - {fileID: 7625728458210353336}
-  - {fileID: 7625728459038511896}
+  - gun: {fileID: 7625728457435545984}
+    bullet: {fileID: 7891857495101506647, guid: cb73f87052ad64d4a8b5071f0fa279d5, type: 3}
+  - gun: {fileID: 7625728457790267218}
+    bullet: {fileID: 7891857495101506647, guid: cb73f87052ad64d4a8b5071f0fa279d5, type: 3}
+  - gun: {fileID: 7625728458481798519}
+    bullet: {fileID: 7891857495101506647, guid: 050c5d87c68fc12488ddcf107a0129ac, type: 3}
+  - gun: {fileID: 7625728457175796468}
+    bullet: {fileID: 7891857495101506647, guid: 050c5d87c68fc12488ddcf107a0129ac, type: 3}
+  - gun: {fileID: 7625728458210353336}
+    bullet: {fileID: 7891857495101506647, guid: 050c5d87c68fc12488ddcf107a0129ac, type: 3}
+  - gun: {fileID: 7625728459038511896}
+    bullet: {fileID: 7891857495101506647, guid: 050c5d87c68fc12488ddcf107a0129ac, type: 3}
   fireDelay: 2.3
+--- !u!114 &5786067404132141870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7625728458962230322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ef839c5b0d3e9f4590d2dccbc55f7c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashColor: {r: 1, g: 1, b: 1, a: 0}
+  flashDuration: 0.3
 --- !u!1 &7625728459038511899
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,7 +374,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7625728459038511896}
   m_Layer: 0
-  m_Name: Right gun 2
+  m_Name: Left gun 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

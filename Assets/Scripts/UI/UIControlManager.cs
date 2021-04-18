@@ -56,6 +56,16 @@ public class UIControlManager : MonoBehaviour
                     ExecuteEvents.Execute(lastSelectedObject, pointer, ExecuteEvents.pointerExitHandler);
                     if (eventSystem.currentSelectedGameObject == null) 
                         eventSystem.SetSelectedGameObject(lastSelectedObject);
+                } 
+                else
+                {
+                    if ( Input.GetButton("Horizontal") || Input.GetButton("Vertical") ) 
+                    {
+                        Cursor.visible = false;
+                        ExecuteEvents.Execute(lastSelectedObject, pointer, ExecuteEvents.pointerExitHandler);
+                        if (eventSystem.currentSelectedGameObject == null) 
+                            eventSystem.SetSelectedGameObject(lastSelectedObject);
+                    }
                 }
             }
         } 

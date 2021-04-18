@@ -7,6 +7,9 @@ public class PlayerMovement : MonoBehaviour
     
     public Rigidbody2D rb; // Store reference to player's rigidbody
     public SpriteRenderer sr; // Store reference to player's sprite
+    public RectTransform canvasUI;
+    public RectTransform leftUIElement;
+    public RectTransform rightUIElement;
 
     public float speed = 9.5f; // Floating point variable to store the player's movement speed.
 
@@ -45,11 +48,16 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Horizontal boundaries
-        // First calculate the orthographic width based on the screen ratio
-        // 82 is the size of UI
-        float screenRatio = ((float)Screen.width - 82) / (float)Screen.height;
+        // First calculate the width of the UI element under which the player cannot be
+        float widthFactor =  (float)Screen.width/ canvasUI.rect.width;
+        float rightUIelementSize = ((float)Screen.width - (rightUIElement.position.x + Mathf.FloorToInt(rightUIElement.rect.width * widthFactor) / 2f)) + Mathf.FloorToInt(rightUIElement.rect.width * widthFactor);
+        float leftUIelementSize = (leftUIElement.position.x - Mathf.FloorToInt(leftUIElement.rect.width * widthFactor) / 2f) + Mathf.FloorToInt(leftUIElement.rect.width * widthFactor);
+
+        // Next calculate the orthographic width based on the screen ratio
+        float screenWidth = ((float)Screen.width - (leftUIelementSize + rightUIelementSize));
+        float screenRatio = screenWidth / (float)Screen.height;
         float widthOrtho = Camera.main.orthographicSize * screenRatio;
-        
+
         if ( position.x + playerHalfWidth > widthOrtho ) {
             position.x = widthOrtho - playerHalfWidth;
         } else if ( position.x - playerHalfWidth < -widthOrtho ) {

@@ -7,6 +7,7 @@ public class VacuumCleaner : MonoBehaviour
     public PlayerShooting ps;
     public PlayerScrap psc;
     public PlayerHealthPoint php;
+    public AudioManager am;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,9 @@ public class VacuumCleaner : MonoBehaviour
 
     // Vaccuming enemy bullet
     public void VacuumEnemyBullet(int ammoToAdd) {
+
+        am.Play("SomethingIsVacuumed");
+
         if ( ps.GetAmmo() < ps.maxAmmo ) {
             // Add one amo in reserve
             ps.addAmmo(ammoToAdd);
@@ -30,6 +34,9 @@ public class VacuumCleaner : MonoBehaviour
 
     // Vaccuming enemy scrap
     public void VacuumScrap(int scrapToAdd, int HPGiven) {
+
+        am.Play("SomethingIsVacuumed");
+
         // Add one scrap in reserve
         psc.AddScrap(scrapToAdd);
         php.Healing(HPGiven);
