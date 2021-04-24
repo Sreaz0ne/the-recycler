@@ -138,4 +138,4 @@ MonoBehaviour:
   sr: {fileID: 7891857495101506644}
   speed: 4
   damage: 1
-  ammoGiven: 1
+  ammoGiven: 3

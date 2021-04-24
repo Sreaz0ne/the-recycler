@@ -31,8 +31,8 @@ public class EnemyHealthPoint : MonoBehaviour
         // If enemy hitting the player
         PlayerHealthPoint playerHP = hitInfo.GetComponent<PlayerHealthPoint> ();
         if (playerHP != null) {
-            playerHP.TakeDamage(playerHP.GetCurrentHealthPoint());
-            Die(); 
+            playerHP.TakeDamage(1);
+            TakeDamage(1);
         }
     }
 

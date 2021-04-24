@@ -10,6 +10,7 @@ public class SpriteFlash : MonoBehaviour {
 	Material mat;
 
     private IEnumerator flashCoroutine;
+    private IEnumerator blinkCoroutine;
 
 	private void Awake() {
 		mat = GetComponent<SpriteRenderer>().material;
@@ -24,18 +25,46 @@ public class SpriteFlash : MonoBehaviour {
 		if (flashCoroutine != null)
 		    StopCoroutine(flashCoroutine);
 		
-		flashCoroutine = DoFlash();
+		flashCoroutine = DoFlash(flashDuration);
         StartCoroutine(flashCoroutine);
     }
 
-    private IEnumerator DoFlash()
+    public void Blink(int numberOfFlash, float blinkDuration) {
+        
+        if (blinkCoroutine != null)
+		    StopCoroutine(blinkCoroutine);
+		
+		blinkCoroutine = DoBlink(numberOfFlash, blinkDuration);
+        StartCoroutine(blinkCoroutine);
+    }
+
+    private IEnumerator DoBlink(int numberOfFlash, float blinkDuration)
+    {   
+        float duration = blinkDuration / numberOfFlash;
+
+        for(int i = 0; i < numberOfFlash; i++) {
+            float lerpTime = 0;
+
+            while (lerpTime < duration)
+            {
+                lerpTime += Time.deltaTime;
+                float perc = lerpTime / duration;
+
+                SetFlashAmount(1f - perc);
+                yield return null;
+            }
+            SetFlashAmount(0);
+        }
+    }
+
+    private IEnumerator DoFlash(float duration)
     {
         float lerpTime = 0;
 
-        while (lerpTime < flashDuration)
+        while (lerpTime < duration)
         {
             lerpTime += Time.deltaTime;
-            float perc = lerpTime / flashDuration;
+            float perc = lerpTime / duration;
 
             SetFlashAmount(1f - perc);
             yield return null;
