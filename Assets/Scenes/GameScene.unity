@@ -15969,6 +15969,10 @@ PrefabInstance:
       propertyPath: maxHealthPoint
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2320279420496796687, guid: 4b67cd766d58f994a870fb65a37b93fd, type: 3}
+      propertyPath: invulnerabilityDuration
+      value: 1.6
+      objectReference: {fileID: 0}
     - target: {fileID: 2320279420496796912, guid: 4b67cd766d58f994a870fb65a37b93fd, type: 3}
       propertyPath: m_RootOrder
       value: 8

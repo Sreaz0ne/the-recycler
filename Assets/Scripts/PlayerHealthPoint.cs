@@ -10,9 +10,12 @@ public class PlayerHealthPoint : MonoBehaviour
     public GameObject explosion; 
 
     public int maxHealthPoint = 1;
+    public float invulnerabilityDuration = 2;
+    public int numberOfFlash = 12;
 
     private int healthPoint;
     private SpriteFlash sp;
+    private float invulnerabilityTime = 0;
 
     // Awake is called when the script instance is being loaded.
     void Awake() {
@@ -26,10 +29,22 @@ public class PlayerHealthPoint : MonoBehaviour
         healthBar.SetHealth(maxHealthPoint);
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        if (invulnerabilityTime > 0) 
+            invulnerabilityTime -= Time.deltaTime;
+    }
+
     public void TakeDamage(int damage){
 
+        if (invulnerabilityTime > 0) 
+            return;
+
+        invulnerabilityTime = invulnerabilityDuration;
+
         // Make player flash
-        sp.Flash();
+        sp.Blink(numberOfFlash, invulnerabilityDuration);
 
         am.Play("PlayerTakingDamage");
 
