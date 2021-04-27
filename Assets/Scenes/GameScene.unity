@@ -15923,7 +15923,7 @@ PrefabInstance:
       objectReference: {fileID: 1719020191}
     - target: {fileID: 2320279420496796685, guid: 4b67cd766d58f994a870fb65a37b93fd, type: 3}
       propertyPath: speed
-      value: 7
+      value: 7.2
       objectReference: {fileID: 0}
     - target: {fileID: 2320279420496796685, guid: 4b67cd766d58f994a870fb65a37b93fd, type: 3}
       propertyPath: canvasUI
