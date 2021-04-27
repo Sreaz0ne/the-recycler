@@ -191,7 +191,7 @@ MonoBehaviour:
   scrapHPPrefab: {fileID: 8004517984913622637, guid: 93fd985da20e1bc4aaaf0f47998aaab4, type: 3}
   explosion: {fileID: 5614033355831927281, guid: 713c2384c623ddf4d9e493cb7acbfc79, type: 3}
   healthPoint: 1
-  scoreGiven: 25
+  scoreGiven: 100
   hpScrapProbability: 20
 --- !u!114 &4789506169032765628
 MonoBehaviour:

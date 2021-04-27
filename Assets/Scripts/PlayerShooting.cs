@@ -15,11 +15,13 @@ public class PlayerShooting : MonoBehaviour
     
     private float cooldownTimer;
     private int ammo;
+    private float resumePauseTimer;
 
     // Awake is called when the script instance is being loaded.
     void Awake() {
         ammo = maxAmmo;
         cooldownTimer = 0f;
+        resumePauseTimer = 0f;
     }
 
     // Start is called before the first frame update
@@ -35,6 +37,13 @@ public class PlayerShooting : MonoBehaviour
         
         cooldownTimer -= Time.deltaTime;
         
+        if( !GameManager.gamePaused && resumePauseTimer > 0) {
+            resumePauseTimer -= Time.deltaTime;
+        }
+        else if( GameManager.gamePaused && resumePauseTimer <= 0) {
+            resumePauseTimer = 0.2f;
+        }
+
         if( Input.GetButton( "Fire1" ) ) {
 
             bool canShoot = true;
@@ -52,6 +61,10 @@ public class PlayerShooting : MonoBehaviour
             }
             
             if ( GameManager.gamePaused ) {
+                canShoot = false;
+            }
+
+            if ( resumePauseTimer > 0 ) {
                 canShoot = false;
             }
 
