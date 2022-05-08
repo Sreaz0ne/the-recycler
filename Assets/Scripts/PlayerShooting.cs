@@ -21,7 +21,7 @@ public class PlayerShooting : MonoBehaviour
     void Awake() {
         ammo = maxAmmo;
         cooldownTimer = 0f;
-        resumePauseTimer = 0f;
+        resumePauseTimer = 0.25f;
     }
 
     // Start is called before the first frame update
@@ -41,7 +41,7 @@ public class PlayerShooting : MonoBehaviour
             resumePauseTimer -= Time.deltaTime;
         }
         else if( GameManager.gamePaused && resumePauseTimer <= 0) {
-            resumePauseTimer = 0.2f;
+            resumePauseTimer = 0.25f;
         }
 
         if( Input.GetButton( "Fire1" ) ) {
@@ -91,8 +91,8 @@ public class PlayerShooting : MonoBehaviour
         maxAmmo += maxAmmoToAdd;
         ammo = maxAmmo;
 
-        ammoBar.SetAmmo(ammo);
         ammoBar.SetMaxAmmo(maxAmmo);
+        ammoBar.SetAmmo(ammo);
     }
 
     private void Shoot() {
