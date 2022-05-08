@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -91,8 +91,8 @@ public class PlayerShooting : MonoBehaviour
         maxAmmo += maxAmmoToAdd;
         ammo = maxAmmo;
 
-        ammoBar.SetAmmo(ammo);
         ammoBar.SetMaxAmmo(maxAmmo);
+        ammoBar.SetAmmo(ammo);
     }
 
     private void Shoot() {
